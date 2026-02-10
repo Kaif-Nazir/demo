@@ -1,10 +1,6 @@
 services:
   - type: web
     name: item-api
-    env: java
-    buildCommand: ./mvnw clean package
-    startCommand: java -jar target/demo-0.0.1-SNAPSHOT.jar
+    env: docker
+    dockerfilePath: ./Dockerfile
     plan: free
-    envVars:
-      - key: JAVA_VERSION
-        value: 21
